@@ -1,0 +1,47 @@
+[
+  {
+    "id": "data-engineers",
+    "title": "Hire Data Engineers",
+    "slug": "data-engineers",
+    "shortDescription": "Connect with skilled data engineers who build robust data pipelines and infrastructure.",
+    "description": "Our data engineers specialize in designing, building, and maintaining scalable data infrastructure. From ETL pipelines to cloud data platforms, we provide professionals who can transform your data architecture.",
+    "benefits": [
+      "Expert in modern data stack (Apache Spark, Kafka, Airflow)",
+      "Cloud platform expertise (AWS, GCP, Azure)",
+      "Scalable data pipeline development",
+      "Real-time data processing capabilities",
+      "Data warehouse and lake implementation"
+    ],
+    "icon": "database"
+  },
+  {
+    "id": "data-scientists",
+    "title": "Hire Data Scientists",
+    "slug": "data-scientists",
+    "shortDescription": "Find data scientists who turn data into actionable insights and predictive models.",
+    "description": "Our data scientists are experts in statistical analysis, machine learning, and AI. They help businesses unlock the value of their data through advanced analytics and predictive modeling.",
+    "benefits": [
+      "Advanced machine learning and AI expertise",
+      "Statistical modeling and analysis",
+      "Python, R, and SQL proficiency",
+      "Experience with ML frameworks (TensorFlow, PyTorch, scikit-learn)",
+      "Business intelligence and data visualization"
+    ],
+    "icon": "chart"
+  },
+  {
+    "id": "analytics-consulting",
+    "title": "Analytics Consulting",
+    "slug": "analytics-consulting",
+    "shortDescription": "Strategic analytics consultants to drive data-driven decision making.",
+    "description": "Our analytics consultants bridge the gap between business and technology, providing strategic guidance on analytics implementation, data strategy, and organizational transformation.",
+    "benefits": [
+      "Data strategy development",
+      "Analytics roadmap planning",
+      "Tool selection and implementation",
+      "Team training and enablement",
+      "ROI optimization and measurement"
+    ],
+    "icon": "lightbulb"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "mission": "To bridge the gap between exceptional data talent and innovative companies, enabling organizations to unlock the full potential of their data.",
+  "vision": "To be the most trusted partner for data and analytics hiring, recognized for our deep technical expertise and commitment to perfect matches.",
+  "story": "DataVruti was founded with a simple observation: hiring data professionals is fundamentally different from hiring other tech roles. The combination of technical depth, domain expertise, and business acumen required makes data roles uniquely challenging to fill.\n\nOur founders, coming from data engineering and analytics backgrounds themselves, understood these challenges firsthand. They built DataVruti to be more than a recruitment agency—we're a specialized partner that truly understands the data landscape.\n\nToday, we work with startups and enterprises across industries, helping them build world-class data teams. Our success is measured not just in placements, but in the long-term impact our candidates make.",
+  "values": [
+    {
+      "title": "Technical Excellence",
+      "description": "We maintain deep expertise in data technologies and trends, ensuring we understand exactly what makes a great data professional."
+    },
+    {
+      "title": "Quality Over Quantity",
+      "description": "We focus on perfect matches, not high volumes. Every candidate we present has been thoroughly vetted for both skills and culture fit."
+    },
+    {
+      "title": "Long-term Partnerships",
+      "description": "We build lasting relationships with both clients and candidates, supporting them beyond the initial placement."
+    },
+    {
+      "title": "Transparency",
+      "description": "Clear communication, honest feedback, and realistic expectations guide every interaction."
+    }
+  ],
+  "stats": [
+    {
+      "number": "500+",
+      "label": "Successful Placements"
+    },
+    {
+      "number": "95%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "number": "18+",
+      "label": "Average Months Retention"
+    },
+    {
+      "number": "3",
+      "label": "Average Weeks to Hire"
+    }
+  ],
+  "partnerLogos": [
+    { "name": "Accenture", "image": "/accenture-logo.avif" },
+    { "name": "American Express", "image": "/amex-logo.avif" },
+    { "name": "Bank of America", "image": "/bofa-logo.avif" },
+    { "name": "Capgemini", "image": "/capgemini-logo.avif" },
+    { "name": "Deloitte", "image": "/deloitte-logo.avif" },
+    { "name": "EY", "image": "/ey-logo.avif" },
+    { "name": "Globant", "image": "/globant-logo.avif" },
+    { "name": "Gramener", "image": "/gramener-logo.avif" },
+    { "name": "LTI Mindtree", "image": "/lti-mindtree.avif" },
+    { "name": "PwC", "image": "/pwc-logo.avif" },
+    { "name": "Sigmoid", "image": "/sigmoid-logo.avif" },
+    { "name": "Tavant", "image": "/tavant-logo.avif" },
+    { "name": "Tiger Analytics", "image": "/tiger-analytics-logo.avif" },
+    { "name": "UST", "image": "/ust-logo.avif" }
+  ]
+}
