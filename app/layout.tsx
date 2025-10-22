@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../styles/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 import { defaultSEO } from '@/utils/seo-config';
 
 const raleway = Raleway({
@@ -41,6 +44,9 @@ export default function RootLayout({
         <Navbar />
         <main className="pb-28 md:pb-0">{children}</main>
         <Footer />
+        <ScrollToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

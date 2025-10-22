@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import CTAButton from '@/components/CTAButton';
+import CTASection from '@/components/ui/CTASection';
 import services from '@/content/services.json';
 
 export const metadata = {
@@ -119,34 +120,14 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative overflow-hidden bg-slate-900 text-white pt-24 pb-40 md:py-32 md:mb-0 -mb-28">
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-850 to-slate-900"></div>
-
-        {/* Very subtle animated orbs */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary-500/8 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent-500/8 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-secondary-500/6 rounded-full blur-3xl"></div>
-
-        <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight font-heading">
-              Ready to Build Your Data Team?
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-              Let's connect you with top data professionals who can drive your business forward.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <CTAButton href="/contact" variant="primary" size="lg">
-                Hire Talent
-              </CTAButton>
-              <CTAButton href="/candidates" variant="outline-light" size="lg">
-                Join as Candidate
-              </CTAButton>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to Build Your Data Team?"
+        subtitle="Let's connect you with top data professionals who can drive your business forward."
+        actions={[
+          { label: 'Hire Talent', href: '/contact', variant: 'primary' },
+          { label: 'Join as Candidate', href: '/candidates', variant: 'outline-light' },
+        ]}
+      />
     </>
   );
 }

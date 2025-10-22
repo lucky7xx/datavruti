@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import ContactForm from '@/components/ContactForm';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
   title: 'For Candidates | DataVruti - Join Our Network',
@@ -153,14 +154,12 @@ export default function CandidatesPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-                Register Your Interest
-              </h2>
-              <p className="text-lg text-neutral-600">
-                Fill out the form below and we'll be in touch with relevant opportunities.
-              </p>
-            </div>
+            <SectionHeader
+              title="Register Your Interest"
+              subtitle="Fill out the form below and we'll be in touch with relevant opportunities."
+              align="center"
+              className="mb-12"
+            />
             <div className="bg-white p-8 rounded-xl shadow-lg border border-neutral-200">
               <ContactForm type="candidate" />
             </div>

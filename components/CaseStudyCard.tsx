@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 interface CaseStudyCardProps {
+  slug: string;
   title: string;
   client: string;
   industry: string;
@@ -10,6 +11,7 @@ interface CaseStudyCardProps {
 }
 
 export default function CaseStudyCard({
+  slug,
   title,
   client,
   industry,
@@ -18,7 +20,7 @@ export default function CaseStudyCard({
   placements,
 }: CaseStudyCardProps) {
   return (
-    <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-neutral-100 hover:border-primary-300 hover:-translate-y-2">
+    <Link href={`/case-studies/${slug}`} className="block group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-neutral-100 hover:border-primary-300 hover:-translate-y-2">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 via-transparent to-blue-50/0 group-hover:from-primary-50/30 group-hover:to-blue-50/20 transition-all duration-500"></div>
 
@@ -52,8 +54,14 @@ export default function CaseStudyCard({
               </p>
             </div>
           </div>
+          <div className="flex items-center gap-2 text-primary-600 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+            <span>View</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

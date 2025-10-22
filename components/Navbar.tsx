@@ -208,16 +208,31 @@ export default function Navbar() {
             </Link>
 
             <div className="hidden md:flex items-center space-x-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-neutral-600 hover:text-accent-600 transition-all duration-300 font-medium px-4 py-2 rounded-xl hover:bg-accent-50/80 relative group"
-                >
-                  {item.name}
-                  <span className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-accent-500 to-accent-600 group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300 rounded-full"></span>
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== '/' && pathname?.startsWith(item.href));
+
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`transition-all duration-300 px-5 py-2.5 rounded-xl relative group overflow-hidden ${
+                      isActive
+                        ? 'text-white bg-gradient-to-r from-accent-500 via-accent-600 to-secondary-600 shadow-lg shadow-accent-500/30 font-semibold'
+                        : 'text-neutral-600 hover:text-accent-600 hover:bg-accent-50/80 hover:shadow-md font-medium'
+                    }`}
+                  >
+                    {isActive && (
+                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></span>
+                    )}
+                    <span className="relative">{item.name}</span>
+                    {!isActive && (
+                      <span className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-accent-500 to-accent-600 group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300 rounded-full"></span>
+                    )}
+                  </Link>
+                );
+              })}
               <Link
                 href="/contact"
                 className="ml-4 relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 text-white px-7 py-3 rounded-xl hover:from-primary-700 hover:via-secondary-700 hover:to-primary-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:shadow-secondary-500/30 hover:scale-105 transform group overflow-hidden"
