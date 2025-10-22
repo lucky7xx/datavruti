@@ -34,7 +34,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 group animate-fade-in-up"
+          className="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-50 group animate-fade-in-up"
           aria-label="Scroll to top"
         >
           <div className="relative">
