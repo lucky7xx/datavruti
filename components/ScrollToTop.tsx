@@ -34,7 +34,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-50 group animate-fade-in-up"
+          className="fixed bottom-24 md:bottom-8 left-4 md:left-8 z-50 group animate-fade-in-up"
           aria-label="Scroll to top"
         >
           <div className="relative">
@@ -66,10 +66,10 @@ export default function ScrollToTop() {
             </div>
 
             {/* Tooltip */}
-            <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="absolute bottom-full left-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               <div className="bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap">
                 Back to top
-                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+                <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
               </div>
             </div>
           </div>

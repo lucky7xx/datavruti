@@ -184,26 +184,16 @@ export default function Navbar() {
       >
         <div className="container-custom">
           <div className="flex h-20 items-center justify-center md:justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-secondary-500 to-accent-600 rounded-xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                <div className="relative w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 overflow-hidden">
-                  <Image
-                    src="/datavruti-logo.png"
-                    alt="DataVruti Logo"
-                    width={52}
-                    height={44}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <div className="block text-center">
-                <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent font-heading group-hover:from-primary-700 group-hover:via-secondary-700 group-hover:to-accent-700 transition-all duration-300">
-                  DataVruti
-                </span>
-                <div className="text-[9px] md:text-[10px] text-neutral-500 -mt-0.5 md:-mt-1 font-medium tracking-wide uppercase">
-                  DATA HIRING EXPERTS
-                </div>
+            <Link href="/" className="flex items-center group">
+              <div className="relative h-14 md:h-16 bg-white rounded-lg px-3 py-2 shadow-sm">
+                <Image
+                  src="/datavruti-full.jpg"
+                  alt="DataVruti Logo"
+                  width={180}
+                  height={64}
+                  className="object-contain h-full w-auto group-hover:scale-105 transition-transform duration-300"
+                  priority
+                />
               </div>
             </Link>
 

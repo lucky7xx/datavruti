@@ -6,6 +6,7 @@ import '../styles/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import Chatbot from '@/components/Chatbot';
 import { defaultSEO } from '@/utils/seo-config';
 
 const raleway = Raleway({
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: defaultSEO.canonical,
-    siteName: 'DataVruti',
+    siteName: 'datavruti',
     title: defaultSEO.title as string,
     description: defaultSEO.description as string,
   },
@@ -45,6 +46,7 @@ export default function RootLayout({
         <main className="pb-28 md:pb-0">{children}</main>
         <Footer />
         <ScrollToTop />
+        <Chatbot />
         <Analytics />
         <SpeedInsights />
       </body>

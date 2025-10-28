@@ -31,7 +31,7 @@ export default function PartnerLogoCarousel({ logos }: PartnerLogoCarouselProps)
   }
 
   return (
-    <div className="relative overflow-hidden group" aria-label="Logos of companies that hire through DataVruti">
+    <div className="relative overflow-hidden group" aria-label="Logos of companies that hire through datavruti">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white via-white/80 to-transparent"></div>
 

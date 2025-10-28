@@ -1,18 +1,18 @@
 import Hero from '@/components/Hero';
-import ContactForm from '@/components/ContactForm';
+import TalentPoolForm from '@/components/TalentPoolForm';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'For Candidates | DataVruti - Join Our Network',
-  description: 'Join DataVruti\'s network of exceptional data professionals. Connect with top companies hiring for data engineering, data science, and analytics roles.',
+  title: 'Join Our Talent Pool | datavruti - 100+ Data Jobs',
+  description: '100+ permanent & contract data jobs across all levels. Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Apply now to join our curated talent pool and get matched with top companies.',
 };
 
 export default function CandidatesPage() {
   return (
     <>
       <Hero
-        title="Join Our Network of Exceptional Data Professionals"
-        subtitle="Connect with top companies actively hiring data talent"
+        title="Join Our Talent Pool - 100+ Data Jobs"
+        subtitle="Permanent & Contract opportunities across all levels - Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Ready to start within 2 weeks."
         showCTAs={false}
       />
 
@@ -21,7 +21,7 @@ export default function CandidatesPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center">
-              Why Join DataVruti?
+              Why Join datavruti?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
@@ -100,34 +100,41 @@ export default function CandidatesPage() {
       {/* Roles We Fill */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
-              Roles We Fill
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 text-center">
+              100+ Open Roles Across Levels
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
+              Current & forecast until Mar'25 - Permanent & contract positions in all things data
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  title: 'Data Engineers',
-                  skills: ['ETL/ELT', 'Data Pipelines', 'Spark', 'Kafka', 'Cloud (AWS/GCP/Azure)'],
+                  title: 'Data Engineering',
+                  roles: ['Data Engineers', 'ML Engineers', 'Big Data Engineers', 'Lead Architects (12+ yrs)'],
                 },
                 {
-                  title: 'Data Scientists',
-                  skills: ['Machine Learning', 'Python/R', 'Statistical Analysis', 'Deep Learning', 'MLOps'],
+                  title: 'DevOps & Cloud',
+                  roles: ['DevOps Engineers', 'DevOps Architects (12+ yrs)', 'MLOps Engineers', 'Platform Architects'],
                 },
                 {
-                  title: 'Analytics Professionals',
-                  skills: ['BI Tools', 'SQL', 'Data Visualization', 'Analytics Strategy', 'Reporting'],
+                  title: 'Data Science & AI',
+                  roles: ['Data Scientists (Junior)', 'Data Scientists (Senior)', 'Deep Learning Experts', 'Decision Scientists'],
                 },
-              ].map((role, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-md">
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-4">
-                    {role.title}
+                {
+                  title: 'Architecture & Analytics',
+                  roles: ['Data Architects', 'Solution Architects', 'Business Architects', 'Data Visualization Experts'],
+                },
+              ].map((category, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-bold text-neutral-900 mb-4 pb-2 border-b-2 border-accent-500">
+                    {category.title}
                   </h3>
                   <ul className="space-y-2">
-                    {role.skills.map((skill, idx) => (
-                      <li key={idx} className="flex items-center text-neutral-600">
+                    {category.roles.map((role, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-neutral-600">
                         <svg
-                          className="w-4 h-4 text-primary-600 mr-2"
+                          className="w-4 h-4 text-accent-600 mr-2 mt-0.5 flex-shrink-0"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -136,10 +143,10 @@ export default function CandidatesPage() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M5 13l4 4L19 7"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
                         </svg>
-                        {skill}
+                        {role}
                       </li>
                     ))}
                   </ul>
@@ -150,18 +157,103 @@ export default function CandidatesPage() {
         </div>
       </section>
 
-      {/* Registration Form */}
+      {/* Industries & Technologies */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center">
+              Industries & Technologies We Cover
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-primary-50 to-accent-50 p-8 rounded-xl">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
+                  <svg className="w-6 h-6 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  Industries
+                </h3>
+                <ul className="grid grid-cols-2 gap-3">
+                  {['BFSI', 'Retail', 'Manufacturing', 'eCommerce', 'Telecom', 'Healthcare', 'Automotive', 'Chemicals'].map((industry) => (
+                    <li key={industry} className="flex items-center text-neutral-700">
+                      <span className="w-2 h-2 bg-accent-500 rounded-full mr-2"></span>
+                      {industry}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-gradient-to-br from-secondary-50 to-primary-50 p-8 rounded-xl">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
+                  <svg className="w-6 h-6 text-secondary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
+                  Cloud Platforms
+                </h3>
+                <ul className="grid grid-cols-2 gap-3">
+                  {['AWS', 'Azure', 'GCP', 'Oracle Cloud'].map((cloud) => (
+                    <li key={cloud} className="flex items-center text-neutral-700">
+                      <span className="w-2 h-2 bg-secondary-500 rounded-full mr-2"></span>
+                      {cloud}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 pt-6 border-t border-neutral-200">
+                  <p className="text-sm text-neutral-600">
+                    <strong>Work Options:</strong> Remote, Hybrid & On-site positions available
+                  </p>
+                  <p className="text-sm text-neutral-600 mt-2">
+                    <strong>Shift Options:</strong> IST, US, UK, APAC timings
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
             <SectionHeader
-              title="Register Your Interest"
-              subtitle="Fill out the form below and we'll be in touch with relevant opportunities."
+              badge="Join Our Talent Pool"
+              title="Apply Now"
+              subtitle="Complete the 3-step application form to join our network. We'll match you with relevant opportunities from our 50+ renowned clients."
               align="center"
               className="mb-12"
             />
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-neutral-200">
-              <ContactForm type="candidate" />
+            <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-neutral-200">
+              <div className="mb-8 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-lg border-l-4 border-primary-500">
+                <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+                  📋 Quick Application Process
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">1</span>
+                    <div>
+                      <p className="text-sm font-semibold text-neutral-800">Job Information</p>
+                      <p className="text-xs text-neutral-600">Role & preferences</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">2</span>
+                    <div>
+                      <p className="text-sm font-semibold text-neutral-800">Basic Information</p>
+                      <p className="text-xs text-neutral-600">Personal & experience details</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">3</span>
+                    <div>
+                      <p className="text-sm font-semibold text-neutral-800">Professional Details</p>
+                      <p className="text-xs text-neutral-600">Skills, certifications & resume</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-neutral-600 mt-4">
+                  ⏱️ Takes only 5-7 minutes to complete • Resume upload required (PDF/Word, max 10MB)
+                </p>
+              </div>
+              <TalentPoolForm />
             </div>
           </div>
         </div>

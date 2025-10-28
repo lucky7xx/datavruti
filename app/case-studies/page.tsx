@@ -5,8 +5,8 @@ import CTASection from '@/components/ui/CTASection';
 import caseStudies from '@/content/case-studies.json';
 
 export const metadata = {
-  title: 'Case Studies | DataVruti - Success Stories',
-  description: 'See how DataVruti has helped companies build exceptional data teams. Real results from our data hiring and recruitment services.',
+  title: 'Case Studies | datavruti - Success Stories',
+  description: 'See how datavruti has helped companies build exceptional data teams. Real results from our data hiring and recruitment services.',
 };
 
 export default function CaseStudiesPage() {

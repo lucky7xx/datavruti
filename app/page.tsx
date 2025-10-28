@@ -31,7 +31,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-              Why Choose DataVruti
+              Why Choose datavruti
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
               We're not just recruiters—we're data hiring specialists who understand your unique challenges
@@ -107,10 +107,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-                About DataVruti
+                About datavruti
               </h2>
               <p className="text-xl text-neutral-600 leading-relaxed mb-6">
-                DataVruti is India's premier recruitment agency specializing exclusively in data, analytics, and AI talent. We bridge the gap between innovative companies and exceptional data professionals.
+                datavruti is India's premier recruitment agency specializing exclusively in data, analytics, and AI talent. We bridge the gap between innovative companies and exceptional data professionals.
               </p>
               <p className="text-lg text-neutral-600 leading-relaxed">
                 Founded by data professionals who understand the unique challenges of hiring in this domain, we combine deep technical expertise with proven recruitment excellence. Our mission is simple: connect the right talent with the right opportunity, every time.

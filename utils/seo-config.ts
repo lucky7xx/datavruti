@@ -1,22 +1,22 @@
 import { DefaultSeoProps } from 'next-seo';
 
 export const defaultSEO: DefaultSeoProps = {
-  title: 'DataVruti | Hire Data & Analytics Talent',
+  title: 'datavruti | Hire Data & Analytics Talent',
   description: 'Leading recruitment agency connecting businesses with data, analytics, and AI professionals. Expert hiring solutions for data engineers, data scientists, and analytics consultants.',
   canonical: 'https://www.datavruti.com',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.datavruti.com',
-    siteName: 'DataVruti',
-    title: 'DataVruti | Hire Data & Analytics Talent',
+    siteName: 'datavruti',
+    title: 'datavruti | Hire Data & Analytics Talent',
     description: 'Leading recruitment agency connecting businesses with data, analytics, and AI professionals.',
     images: [
       {
         url: 'https://www.datavruti.com/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'DataVruti - Hire Data & Analytics Talent',
+        alt: 'datavruti - Hire Data & Analytics Talent',
       },
     ],
   },
@@ -40,7 +40,7 @@ export const defaultSEO: DefaultSeoProps = {
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'DataVruti',
+  name: 'datavruti',
   url: 'https://www.datavruti.com',
   logo: 'https://www.datavruti.com/images/logo.png',
   description: 'Leading recruitment agency connecting businesses with data, analytics, and AI professionals.',
@@ -56,7 +56,7 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'DataVruti',
+  name: 'datavruti',
   image: 'https://www.datavruti.com/images/logo.png',
   '@id': 'https://www.datavruti.com',
   url: 'https://www.datavruti.com',

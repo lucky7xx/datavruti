@@ -8,8 +8,8 @@ import IconBadge from '@/components/ui/IconBadge';
 import aboutData from '@/content/about.json';
 
 export const metadata = {
-  title: 'About Us | DataVruti',
-  description: 'Learn about DataVruti - our mission, vision, and commitment to connecting companies with exceptional data talent.',
+  title: 'About Us | datavruti',
+  description: 'Learn about datavruti - our mission, vision, and commitment to connecting companies with exceptional data talent.',
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="About DataVruti"
+        title="About datavruti"
         subtitle="Bridging the gap between exceptional data talent and innovative companies"
         showCTAs={false}
       />

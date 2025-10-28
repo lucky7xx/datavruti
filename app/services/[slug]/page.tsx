@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${service.title} | DataVruti`,
+    title: `${service.title} | datavruti`,
     description: service.description,
   };
 }

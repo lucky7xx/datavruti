@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'DataVruti | Hire Data & Analytics Talent',
+  title: 'datavruti | Hire Data & Analytics Talent',
   description: 'Leading recruitment agency connecting businesses with data, analytics, and AI professionals.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.datavruti.com/',
-    site_name: 'DataVruti',
+    site_name: 'datavruti',
   },
   twitter: {
     handle: '@datavruti',

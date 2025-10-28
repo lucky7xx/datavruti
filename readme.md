@@ -1,7 +1,7 @@
-# DataVruti Website Revamp (Next.js Project)
+# datavruti Website Revamp (Next.js Project)
 
 ## 📌 Overview
-DataVruti (https://www.datavruti.com) is a **hiring and recruitment agency** focused on data, analytics, and technology talent.  
+datavruti (https://www.datavruti.com) is a **hiring and recruitment agency** focused on data, analytics, and technology talent.  
 This project revamps the current site into a **modern, SEO-optimized, and conversion-driven** website using **Next.js**.
 
 The new site will:
@@ -21,7 +21,7 @@ The new site will:
    Add sections for **case studies**, **testimonials**, and **client logos**.
 
 3. **SEO & Discoverability**  
-   Ensure DataVruti ranks for:  
+   Ensure datavruti ranks for:  
    - “Data hiring agency”  
    - “Hire data engineers”  
    - “AI recruitment partner”  
@@ -142,7 +142,7 @@ Each service with short description and benefits.
 - 3–5 case studies with client name, challenge, and result.
 
 ### 5. Candidates
-- Why join DataVruti.
+- Why join datavruti.
 - Simple registration form (name, email, skills, resume upload).
 
 ### 6. Contact
@@ -183,11 +183,11 @@ Example config:
 ```ts
 // utils/seo-config.ts
 export const defaultSEO = {
-  title: "DataVruti | Hire Data & Analytics Talent",
+  title: "datavruti | Hire Data & Analytics Talent",
   description: "Leading recruitment agency connecting businesses with data, analytics, and AI professionals.",
   openGraph: {
     type: "website",
     url: "https://www.datavruti.com",
-    site_name: "DataVruti",
+    site_name: "datavruti",
   },
 };

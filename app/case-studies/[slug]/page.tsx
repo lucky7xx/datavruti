@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: CaseStudyPageProps) {
 
   if (!caseStudy) {
     return {
-      title: 'Case Study Not Found | DataVruti',
+      title: 'Case Study Not Found | datavruti',
     };
   }
 
   return {
-    title: `${caseStudy.title} | DataVruti Case Studies`,
+    title: `${caseStudy.title} | datavruti Case Studies`,
     description: caseStudy.challenge,
   };
 }

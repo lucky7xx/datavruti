@@ -1,8 +1,8 @@
-# DataVruti Website - Project Summary
+# datavruti Website - Project Summary
 
 ## ✅ Project Complete
 
-The DataVruti website has been successfully built with Next.js 14, following all specifications from the readme file.
+The datavruti website has been successfully built with Next.js 14, following all specifications from the readme file.
 
 ---
 
@@ -42,7 +42,7 @@ The DataVruti website has been successfully built with Next.js 14, following all
    - Metrics (timeframe, placements)
 
 6. **Candidates** (`/candidates`)
-   - Why join DataVruti
+   - Why join datavruti
    - Roles we fill
    - Registration form with resume upload
 

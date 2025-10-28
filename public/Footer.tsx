@@ -35,15 +35,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-5">
-            <div className="mb-6">
-              <div className="relative h-16 bg-white rounded-lg px-4 py-3 shadow-lg inline-block">
-                <Image
-                  src="/datavruti-full.jpg"
-                  alt="DataVruti Logo"
-                  width={200}
-                  height={64}
-                  className="object-contain h-full w-auto"
-                />
+            <div className="flex items-center space-x-3 mb-6 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-secondary-500 to-accent-600 rounded-xl blur opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                <div className="relative w-13 h-11 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                  <Image
+                    src="/datavruti-logo.png"
+                    alt="datavruti Logo"
+                    width={52}
+                    height={44}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white font-heading">datavruti</h3>
+                <div className="text-[10px] text-neutral-400 -mt-1 font-medium tracking-wide">GLOBAL DATA TALENT</div>
               </div>
             </div>
             <p className="text-neutral-400 mb-8 leading-relaxed text-base">
