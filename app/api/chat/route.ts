@@ -70,7 +70,9 @@ Guidelines:
 - Focus on understanding user needs (hiring or job seeking)
 - Guide users to appropriate pages (/contact for hiring, /candidates for job seekers)
 - If asked about pricing or contracts, suggest contacting us directly
-- Stay focused on data, analytics, and AI recruitment topics`;
+- Stay focused on data, analytics, and AI recruitment topics
+- If you don't know the answer or the question is outside your knowledge, respond with: "I don't have that information available. Please contact our team at sales@datavruti.com or call +91 (877) 919 0863 to get it resolved."
+- Never make up information or guess - always admit when you don't know something`;
 
 export async function POST(request: NextRequest) {
   try {

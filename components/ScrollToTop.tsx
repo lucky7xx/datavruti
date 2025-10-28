@@ -34,28 +34,37 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-24 md:bottom-8 left-4 md:left-8 z-50 group animate-fade-in-up"
+          className="scroll-to-top-button fixed bottom-[6.25rem] left-0 md:bottom-8 md:left-8 z-50 group animate-fade-in-up"
           aria-label="Scroll to top"
         >
-          <div className="relative">
-            {/* Outer glow ring */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary-500 via-accent-500 to-secondary-500 rounded-full opacity-60 group-hover:opacity-90 blur-lg transition-all duration-500 animate-pulse"></div>
-
-            {/* Middle ring */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 via-accent-600 to-secondary-600 rounded-full opacity-80 group-hover:opacity-100 transition-all duration-300"></div>
-
-            {/* Button */}
-            <div className="relative w-14 h-14 bg-gradient-to-br from-primary-600 via-accent-600 to-secondary-600 rounded-full flex items-center justify-center text-white shadow-2xl group-hover:shadow-[0_20px_60px_rgba(231,60,55,0.5)] transition-all duration-300 group-hover:scale-110 border-2 border-white/20">
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300"></div>
-
-              {/* Icon */}
+          {/* Mobile: Slim vertical tab */}
+          <div className="md:hidden">
+            <div className="relative w-12 h-12 bg-white/95 backdrop-blur-xl rounded-r-xl shadow-lg flex items-center justify-center border border-neutral-200/80">
               <svg
-                className="relative w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300"
+                className="w-5 h-5 text-neutral-700"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                strokeWidth={3}
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 15l7-7 7 7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Desktop: Minimal elegant button */}
+          <div className="hidden md:block relative">
+            <div className="relative w-12 h-12 bg-white/95 backdrop-blur-xl rounded-xl shadow-lg flex items-center justify-center border border-neutral-200/80 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+              <svg
+                className="w-5 h-5 text-neutral-700 group-hover:-translate-y-0.5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
               >
                 <path
                   strokeLinecap="round"
@@ -66,10 +75,10 @@ export default function ScrollToTop() {
             </div>
 
             {/* Tooltip */}
-            <div className="absolute bottom-full left-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               <div className="bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap">
                 Back to top
-                <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
               </div>
             </div>
           </div>

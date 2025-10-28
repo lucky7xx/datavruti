@@ -28,6 +28,18 @@ export default function Chatbot() {
     scrollToBottom();
   }, [messages]);
 
+  // Hide scroll-to-top button on mobile when chatbot is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('chatbot-open');
+    } else {
+      document.body.classList.remove('chatbot-open');
+    }
+    return () => {
+      document.body.classList.remove('chatbot-open');
+    };
+  }, [isOpen]);
+
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
@@ -218,15 +230,35 @@ export default function Chatbot() {
 
   return (
     <>
-      {/* Chatbot Toggle Button - Modern Glassmorphism Design */}
+      {/* Chatbot Toggle Button - Slim side tab for mobile, round for desktop */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-24 md:bottom-8 right-4 md:right-8 z-50 group transition-all duration-500 ${
-          isOpen ? 'scale-0 rotate-180' : 'scale-100 rotate-0'
-        }`}
+        className={`fixed z-50 group transition-all duration-500 ${
+          isOpen ? 'md:scale-0 md:rotate-180' : 'scale-100 rotate-0'
+        } right-0 bottom-[6.25rem] md:right-8 md:bottom-8`}
         aria-label="Open chat"
       >
-        <div className="relative">
+        {/* Mobile: Slim vertical tab */}
+        <div className="md:hidden">
+          <div className="relative">
+            {/* Glowing effect */}
+            <div className="absolute -inset-1 bg-gradient-to-br from-accent-400 to-secondary-500 rounded-l-2xl opacity-75 blur-md animate-pulse"></div>
+
+            {/* Main button */}
+            <div className="relative w-12 h-16 bg-gradient-to-br from-accent-500 to-secondary-600 rounded-l-2xl shadow-2xl flex items-center justify-center border-l-2 border-t-2 border-b-2 border-white/20">
+              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+              {/* Notification badge */}
+              <div className="absolute -top-1 -left-1 w-5 h-5 bg-gradient-to-br from-red-500 to-red-600 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold">
+                1
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Round glassmorphic button */}
+        <div className="hidden md:block relative">
           {/* Animated gradient ring */}
           <div className="absolute -inset-3 bg-gradient-to-r from-accent-400 via-secondary-500 to-primary-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 animate-pulse"></div>
 
@@ -263,7 +295,7 @@ export default function Chatbot() {
 
       {/* Chatbot Window - Ultra Modern Design */}
       {isOpen && (
-        <div className="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-50 w-[calc(100vw-2rem)] md:w-[28rem] h-[36rem] flex flex-col animate-slideUp">
+        <div className="fixed bottom-[6.5625rem] md:bottom-8 right-4 md:right-8 z-50 w-[calc(100vw-2rem)] md:w-[28rem] h-[36rem] flex flex-col animate-scale-in origin-bottom-right">
           {/* Glassmorphism container */}
           <div className="relative flex flex-col h-full bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
             {/* Gradient background overlay */}
