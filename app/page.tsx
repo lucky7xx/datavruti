@@ -443,27 +443,40 @@ export default function Home() {
                 category: 'Emerging Tech',
                 roles: ['Prompt Engineer', 'LLM Engineer', 'AI Product Manager', 'GenAI Specialist', 'AI Ethics Lead'],
               },
-            ].map((roleGroup, index) => (
-              <div key={index} className="bg-gradient-to-br from-neutral-50 to-white p-8 rounded-2xl border border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-200">
-                  {roleGroup.category}
-                </h3>
-                <ul className="space-y-2">
-                  {roleGroup.roles.map((role, idx) => {
-                    const iconColors = ['text-accent-600', 'text-secondary-600', 'text-primary-600'];
-                    const colorClass = iconColors[idx % 3];
-                    return (
-                      <li key={idx} className="flex items-center text-neutral-700">
-                        <svg className={`w-5 h-5 ${colorClass} mr-3 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        {role}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
+            ].map((roleGroup, index) => {
+              const gradients = [
+                { from: 'from-primary-600', to: 'to-accent-600' },
+                { from: 'from-accent-600', to: 'to-secondary-600' },
+                { from: 'from-secondary-600', to: 'to-primary-600' },
+                { from: 'from-primary-600', to: 'to-secondary-600' },
+                { from: 'from-accent-600', to: 'to-primary-600' },
+                { from: 'from-secondary-600', to: 'to-accent-600' }
+              ];
+              return (
+                <div key={index} className="group relative">
+                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
+                  <div className="relative bg-white p-8 rounded-2xl border border-neutral-100 shadow-md hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
+                    <h3 className="text-xl font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-200">
+                      {roleGroup.category}
+                    </h3>
+                    <ul className="space-y-2">
+                      {roleGroup.roles.map((role, idx) => {
+                        const iconColors = ['text-accent-600', 'text-secondary-600', 'text-primary-600'];
+                        const colorClass = iconColors[idx % 3];
+                        return (
+                          <li key={idx} className="flex items-center text-neutral-700">
+                            <svg className={`w-5 h-5 ${colorClass} mr-3 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            {role}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center">
