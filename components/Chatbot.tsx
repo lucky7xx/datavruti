@@ -455,7 +455,7 @@ export default function Chatbot() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask me anything..."
-                  className="flex-1 px-5 py-3 bg-white border-2 border-neutral-200 hover:border-accent-300 focus:border-accent-500 rounded-2xl outline-none transition-all duration-300 text-sm shadow-sm"
+                  className="flex-1 px-5 py-3 bg-white border-2 border-neutral-200 hover:border-accent-300 focus:border-accent-500 rounded-2xl outline-none transition-all duration-300 text-base shadow-sm"
                   disabled={isLoading}
                 />
                 <button
