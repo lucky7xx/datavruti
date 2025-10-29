@@ -226,7 +226,7 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
             onChange={handleChange}
             onBlur={handleBlur}
             className={getInputClassName('name')}
-            placeholder="Samantha Smith"
+            placeholder="Amit Shah"
             aria-invalid={touched.name && !!errors.name}
             aria-describedby={errors.name ? 'name-error' : undefined}
           />
@@ -243,7 +243,7 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
         {/* Email Field */}
         <div className="group">
           <label htmlFor="email" className="block text-sm font-semibold text-neutral-700 mb-2 group-focus-within:text-accent-600 transition-colors">
-            Email Address <span className="text-red-500">*</span>
+            Company Email<span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -253,7 +253,7 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
             onChange={handleChange}
             onBlur={handleBlur}
             className={getInputClassName('email')}
-            placeholder="sam23@hmailer.com"
+            placeholder="amit@companyname.com"
             aria-invalid={touched.email && !!errors.email}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
@@ -280,7 +280,7 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
             onChange={handleChange}
             onBlur={handleBlur}
             className={getInputClassName('phone')}
-            placeholder="+1 (555) 123-4567"
+            placeholder="+91 9876543210"
             aria-invalid={touched.phone && !!errors.phone}
             aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
@@ -427,7 +427,7 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
             </>
           ) : (
             <>
-              <span className="relative">{type === 'candidate' ? 'Register Now' : 'Send Message'}</span>
+              <span className="relative">{type === 'candidate' ? 'Register Now' : 'Send Requirements'}</span>
               <svg className="w-5 h-5 relative group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

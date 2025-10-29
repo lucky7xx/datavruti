@@ -29,7 +29,7 @@ export default function SectionHeader({
         </span>
       )}
       {typeof title === 'string' ? (
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-neutral-900 via-primary-800 to-neutral-900 bg-clip-text text-transparent mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-neutral-900 via-primary-800 to-neutral-900 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           {title}
         </h2>
       ) : (

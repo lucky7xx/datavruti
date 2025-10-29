@@ -89,6 +89,116 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Client Types - Trusted By */}
+      {aboutData.clientTypes && (
+        <section className="section-padding bg-gradient-to-br from-primary-50/30 via-white to-accent-50/30">
+          <div className="container-custom">
+            <div className="max-w-5xl mx-auto">
+              <SectionHeader
+                badge="Trusted Globally"
+                title="Who We Work With"
+                align="center"
+                className="mb-12"
+              />
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-neutral-100 p-8 md:p-12">
+                <p className="text-lg text-neutral-700 leading-relaxed text-center">
+                  {aboutData.clientTypes}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Top Sectors & Job Families */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Sectors */}
+            {aboutData.sectors && (
+              <div>
+                <SectionHeader
+                  badge="Industries"
+                  title="Our Top Sectors"
+                  align="left"
+                  className="mb-8"
+                />
+                <div className="space-y-4">
+                  {aboutData.sectors.map((sector: any, index: number) => (
+                    <div key={index} className="group relative">
+                      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
+                      <div className="relative bg-gradient-to-br from-neutral-50 to-white rounded-xl p-5 border border-neutral-200 group-hover:border-primary-300 transition-all duration-300">
+                        <div className="flex items-center justify-between">
+                          <span className="text-lg font-semibold text-neutral-900">{sector.name}</span>
+                          <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+                            {sector.percentage}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Job Families */}
+            {aboutData.jobFamilies && (
+              <div>
+                <SectionHeader
+                  badge="Expertise"
+                  title="Job Families We Excel At"
+                  align="left"
+                  className="mb-8"
+                />
+                <div className="space-y-4">
+                  {aboutData.jobFamilies.map((family: any, index: number) => (
+                    <div key={index} className="group relative">
+                      <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary-600 to-accent-600 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
+                      <div className="relative bg-gradient-to-br from-neutral-50 to-white rounded-xl p-5 border border-neutral-200 group-hover:border-secondary-300 transition-all duration-300">
+                        <h4 className="text-lg font-bold text-neutral-900 mb-2">{family.category}</h4>
+                        <p className="text-neutral-600">{family.roles}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Engagement Models */}
+      {aboutData.engagementModels && (
+        <section className="section-padding bg-gradient-to-br from-neutral-50 via-white to-neutral-50">
+          <div className="container-custom">
+            <SectionHeader
+              badge="How We Work"
+              title="Engagement Models"
+              subtitle="Flexible solutions tailored to your needs"
+              align="center"
+              className="mb-12"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {aboutData.engagementModels.map((model: any, index: number) => (
+                <GlowCard
+                  key={index}
+                  gradientFrom={index === 0 ? "from-primary-600" : index === 1 ? "from-accent-600" : "from-secondary-600"}
+                  gradientVia={index === 0 ? "via-secondary-500" : index === 1 ? "via-secondary-500" : "via-accent-500"}
+                  gradientTo={index === 0 ? "to-accent-600" : index === 1 ? "to-primary-600" : "to-primary-600"}
+                  className="text-center flex flex-col h-full"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 via-accent-500 to-secondary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg flex-shrink-0">
+                    <span className="text-3xl font-bold text-white">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 mb-4">{model.name}</h3>
+                  <p className="text-neutral-600 leading-relaxed flex-grow">{model.description}</p>
+                </GlowCard>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Values */}
       <section className="section-padding bg-gradient-to-br from-neutral-50 via-accent-50/20 to-neutral-50">
         <div className="container-custom">

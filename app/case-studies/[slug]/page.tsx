@@ -153,6 +153,36 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
             </div>
 
+            {/* Testimonial Section */}
+            {caseStudy.testimonial && (
+              <div className="mb-16">
+                <GlowCard gradientFrom="from-primary-600" gradientVia="via-secondary-600" gradientTo="to-accent-600" className="bg-gradient-to-br from-slate-50 to-white">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                        {caseStudy.testimonial.name.charAt(0)}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-start gap-3 mb-4">
+                        <svg className="w-8 h-8 text-accent-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                        <p className="text-lg text-neutral-700 leading-relaxed italic">
+                          {caseStudy.testimonial.quote}
+                        </p>
+                      </div>
+                      <div className="border-t border-neutral-200 pt-4">
+                        <p className="text-xl font-bold text-neutral-900">{caseStudy.testimonial.name}</p>
+                        <p className="text-sm text-neutral-600 mt-1">{caseStudy.testimonial.role}</p>
+                        <p className="text-sm text-neutral-500">{caseStudy.testimonial.company}</p>
+                      </div>
+                    </div>
+                  </div>
+                </GlowCard>
+              </div>
+            )}
+
             {/* CTA Section */}
             <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 text-center">
               <AnimatedBackground variant="subtle" />

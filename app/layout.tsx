@@ -16,21 +16,78 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: defaultSEO.title,
+  metadataBase: new URL('https://www.datavruti.com'),
+  title: {
+    default: defaultSEO.title as string,
+    template: '%s | DataVruti - Global Data Talent Recruitment',
+  },
   description: defaultSEO.description,
-  keywords: 'data hiring agency, hire data engineers, hire data scientists, AI recruitment, analytics recruitment, data talent, data hiring agency India',
+  keywords: [
+    'data recruitment agency',
+    'hire data engineers',
+    'hire data scientists',
+    'data analytics recruitment',
+    'AI recruitment',
+    'machine learning recruitment',
+    'data talent acquisition',
+    'tech recruitment India',
+    'data jobs India',
+    'recruitment agency Mumbai',
+    'recruitment agency Ahmedabad',
+    'IT staffing',
+    'contract staffing',
+    'permanent hiring',
+    'RPO services',
+    'data science jobs',
+    'data engineering jobs',
+    'analytics jobs',
+    'BFSI recruitment',
+    'SaaS recruitment',
+    'startup hiring',
+  ],
+  authors: [{ name: 'DataVruti' }],
+  creator: 'Reflion Tech Private Limited',
+  publisher: 'DataVruti',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: defaultSEO.canonical,
-    siteName: 'datavruti',
+    siteName: 'DataVruti',
     title: defaultSEO.title as string,
     description: defaultSEO.description as string,
+    images: [
+      {
+        url: '/datavruti-full.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'DataVruti - Global Data Talent Recruitment',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: defaultSEO.title as string,
     description: defaultSEO.description as string,
+    images: ['/datavruti-full.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification-code-here',
   },
 };
 

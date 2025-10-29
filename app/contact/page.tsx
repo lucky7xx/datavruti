@@ -24,8 +24,7 @@ export default function ContactPage() {
                 Get In Touch
               </h2>
               <p className="text-lg text-neutral-600 mb-8">
-                Whether you're looking to hire data talent or join our network,
-                we'd love to hear from you.
+                Whether it's permanent hiring, RPO or urgent staffing requirements, write to us and one of our experts will connect with you.
               </p>
 
               <div className="space-y-6">
@@ -57,11 +56,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Call/WhatsApp */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-6 h-6 text-primary-600"
+                      className="w-6 h-6 text-green-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -75,17 +74,19 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900 mb-1">Phone</h3>
+                    <h3 className="font-semibold text-neutral-900 mb-1">Call/WhatsApp</h3>
                     <a
-                      href="tel: +918779190863"
-                      className="text-primary-600 hover:text-primary-700"
+                      href="https://api.whatsapp.com/send/?phone=919378092086&text=Hi+datavruti+Team%2C%0AGot+your+reference+from+the+website.+Can+we+chat%3F&type=phone_number&app_absent=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:text-green-700"
                     >
-                       +91 (877) 919 0863
+                      +91 9378092086
                     </a>
                   </div>
                 </div>
 
-                {/* Office */}
+                {/* Offices */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
@@ -109,21 +110,9 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900 mb-1">Office</h3>
+                    <h3 className="font-semibold text-neutral-900 mb-1">Locations</h3>
                     <p className="text-neutral-600">
-                    
-
-B-1302 Karmyog Heights,
-
-S. V. Desai Marg,
-
-Navrangpura,
-
-Ahmedabad 380009,
-
-Gujarat, India
-
-
+                      Ahmedabad, Mumbai
                     </p>
                   </div>
                 </div>
@@ -143,7 +132,7 @@ Gujarat, India
             <div>
               <div className="bg-white p-8 rounded-xl shadow-lg border border-neutral-200">
                 <h3 className="text-xl font-semibold text-neutral-900 mb-6">
-                  Send Us a Message
+                  Share Your Hiring Requirements
                 </h3>
                 <ContactForm type="contact" />
               </div>

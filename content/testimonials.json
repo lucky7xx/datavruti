@@ -1,38 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Rajesh Kumar",
-    "position": "CTO",
-    "company": "TechVentures Inc.",
-    "image": "/images/team/avatar1.jpg",
-    "content": "datavruti helped us find exceptional data engineers within just 2 weeks. Their understanding of our technical requirements and company culture was impressive.",
-    "rating": 5
-  },
-  {
-    "id": 2,
-    "name": "Priya Sharma",
-    "position": "Head of Analytics",
-    "company": "DataFlow Solutions",
-    "image": "/images/team/avatar2.jpg",
-    "content": "The quality of candidates we received was outstanding. datavruti's screening process ensured we only interviewed top-tier data scientists who were the perfect fit for our team.",
-    "rating": 5
-  },
-  {
-    "id": 3,
-    "name": "Michael Chen",
-    "position": "VP Engineering",
-    "company": "CloudScale",
-    "image": "/images/team/avatar3.jpg",
-    "content": "Working with datavruti was a game-changer for our hiring process. They understand the nuances of data roles and consistently deliver exceptional talent.",
-    "rating": 5
-  },
-  {
-    "id": 4,
-    "name": "Anita Desai",
-    "position": "Founder & CEO",
-    "company": "Analytics Pro",
-    "image": "/images/team/avatar4.jpg",
-    "content": "datavruti's deep expertise in the data and analytics domain sets them apart. They're not just recruiters—they're strategic partners in building our data team.",
+    "name": "Guha Athreya",
+    "position": "Chief Product Officer",
+    "company": "Current customer at Ai Palette and previously at Asper.ai",
+    "image": "/images/team/guha-athreya.jpg",
+    "content": "I have had the pleasure of working with Vikram and his recruitment agency on multiple occasions, and each time, they have exceeded my expectations. Their unique approach to understanding the specific needs of the job beyond the written description has resulted in a consistently high success rate in finding the right talent, especially for niche roles. His thorough vetting process makes him an invaluable partner. I highly recommend Vikram and his team to anyone looking for top-tier recruitment services.",
     "rating": 5
   }
 ]

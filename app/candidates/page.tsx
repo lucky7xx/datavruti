@@ -11,7 +11,7 @@ export default function CandidatesPage() {
   return (
     <>
       <Hero
-        title="Join Our Talent Pool - 100+ Data Jobs"
+        title="Join Our Talent Pool -  Data Jobs"
         subtitle="Permanent & Contract opportunities across all levels - Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Ready to start within 2 weeks."
         showCTAs={false}
       />
@@ -102,10 +102,10 @@ export default function CandidatesPage() {
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 text-center">
-              100+ Open Roles Across Levels
+             Open Roles Across Levels
             </h2>
             <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
-              Current & forecast until Mar'25 - Permanent & contract positions in all things data
+ Permanent & contract positions in all things data
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -217,7 +217,7 @@ export default function CandidatesPage() {
             <SectionHeader
               badge="Join Our Talent Pool"
               title="Apply Now"
-              subtitle="Complete the 3-step application form to join our network. We'll match you with relevant opportunities from our 50+ renowned clients."
+              subtitle="Complete the 3-step application form to join our network. We'll match you with relevant opportunities from our 75+ renowned clients."
               align="center"
               className="mb-12"
             />

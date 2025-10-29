@@ -1,20 +1,50 @@
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
-import TestimonialCard from '@/components/TestimonialCard';
 import CTAButton from '@/components/CTAButton';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import PartnerLogoCarousel from '@/components/PartnerLogoCarousel';
 import services from '@/content/services.json';
 import testimonials from '@/content/testimonials.json';
-import { organizationSchema } from '@/utils/seo-config';
+import aboutData from '@/content/about.json';
+import { organizationSchema, localBusinessSchema, websiteSchema } from '@/utils/seo-config';
+
+export const metadata = {
+  title: 'DataVruti | Global Data Talent Recruitment Agency',
+  description: 'Leading recruitment agency specializing in data, analytics, and AI talent. Connect with top data engineers, data scientists, and analytics professionals. Serving India and USA.',
+  keywords: [
+    'data recruitment agency India',
+    'hire data engineers',
+    'hire data scientists',
+    'data analytics recruitment',
+    'AI ML recruitment',
+    'tech recruitment Mumbai Ahmedabad',
+    'contract staffing data professionals',
+    'permanent hiring data talent',
+    'RPO services India',
+  ],
+  alternates: {
+    canonical: 'https://www.datavruti.com',
+  },
+};
 
 export default function Home() {
+  const partnerLogos = aboutData.partnerLogos ?? [];
+
   return (
     <>
-      {/* JSON-LD Schema */}
+      {/* JSON-LD Structured Data Schemas */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       {/* Hero Section */}
@@ -74,9 +104,15 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Long-term Partnership',
-                description: '18+ months average retention. We focus on cultural fit, not just skills.',
+                description: 'Sourced across channels ensuring fastest access to relevant talent.',
               },
             ].map((feature, index) => {
+              const gradients = [
+                { from: 'from-accent-600', to: 'to-primary-600' },
+                { from: 'from-secondary-600', to: 'to-accent-600' },
+                { from: 'from-primary-600', to: 'to-secondary-600' },
+                { from: 'from-accent-600', to: 'to-secondary-600' }
+              ];
               const bgColors = [
                 'bg-gradient-to-br from-accent-100 to-accent-50',
                 'bg-gradient-to-br from-secondary-100 to-secondary-50',
@@ -84,16 +120,19 @@ export default function Home() {
                 'bg-gradient-to-br from-accent-100 to-accent-50'
               ];
               return (
-                <div key={index} className="text-center group">
-                  <div className={`w-20 h-20 ${bgColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                    {feature.icon}
+                <div key={index} className="text-center group relative">
+                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
+                  <div className="relative bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100 h-full flex flex-col">
+                    <div className={`w-20 h-20 ${bgColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-neutral-600 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-neutral-600 leading-relaxed">
-                    {feature.description}
-                  </p>
                 </div>
               );
             })}
@@ -113,7 +152,7 @@ export default function Home() {
                 datavruti is India's premier recruitment agency specializing exclusively in data, analytics, and AI talent. We bridge the gap between innovative companies and exceptional data professionals.
               </p>
               <p className="text-lg text-neutral-600 leading-relaxed">
-                Founded by data professionals who understand the unique challenges of hiring in this domain, we combine deep technical expertise with proven recruitment excellence. Our mission is simple: connect the right talent with the right opportunity, every time.
+                Founded by industry veterans who understand the unique challenges of hiring in this domain, we combine deep technical expertise with proven recruitment excellence. Our mission is simple: connect the right talent with the right opportunity, every time.
               </p>
             </div>
           </div>
@@ -128,7 +167,7 @@ export default function Home() {
               Our Specialized Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-4">
-              We focus exclusively on data, analytics, and AI roles—from junior analysts to Chief Data Officers
+              We focus exclusively on data, analytics, and AI roles—from Data Analysts to PhDs and everything in between.
             </p>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
               Our specialized approach means we understand the technical nuances of every role and can accurately assess candidate capabilities.
@@ -221,20 +260,29 @@ export default function Home() {
                   'text-primary-100',
                   'text-accent-100'
                 ];
+                const gradients = [
+                  { from: 'from-accent-600', to: 'to-primary-600' },
+                  { from: 'from-secondary-600', to: 'to-accent-600' },
+                  { from: 'from-primary-600', to: 'to-secondary-600' },
+                  { from: 'from-accent-600', to: 'to-secondary-600' }
+                ];
                 return (
-                  <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative">
-                    <div className={`absolute top-4 right-4 text-6xl font-bold ${stepColors[index]}`}>
-                      {process.step}
+                  <div key={index} className="group relative">
+                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
+                    <div className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100 h-full flex flex-col">
+                      <div className={`absolute top-4 right-4 text-6xl font-bold ${stepColors[index]}`}>
+                        {process.step}
+                      </div>
+                      <div className={`w-16 h-16 bg-gradient-to-br ${process.gradient} rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                        {process.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                        {process.title}
+                      </h3>
+                      <p className="text-neutral-600 leading-relaxed flex-grow">
+                        {process.description}
+                      </p>
                     </div>
-                    <div className={`w-16 h-16 bg-gradient-to-br ${process.gradient} rounded-xl flex items-center justify-center mb-6 shadow-md`}>
-                      {process.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-                      {process.title}
-                    </h3>
-                    <p className="text-neutral-600 leading-relaxed">
-                      {process.description}
-                    </p>
                   </div>
                 );
               })}
@@ -305,14 +353,27 @@ export default function Home() {
                   </svg>
                 )
               },
-            ].map((industry, index) => (
-              <div key={index} className="text-center p-6 bg-neutral-50 rounded-xl hover:bg-primary-50 hover:shadow-md transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform">
-                  {industry.icon}
+            ].map((industry, index) => {
+              const gradients = [
+                { from: 'from-accent-600', to: 'to-primary-600' },
+                { from: 'from-secondary-600', to: 'to-accent-600' },
+                { from: 'from-primary-600', to: 'to-secondary-600' },
+                { from: 'from-primary-600', to: 'to-accent-600' },
+                { from: 'from-primary-600', to: 'to-secondary-600' },
+                { from: 'from-secondary-600', to: 'to-accent-600' }
+              ];
+              return (
+                <div key={index} className="group relative">
+                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
+                  <div className="relative text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 border border-neutral-100">
+                    <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {industry.icon}
+                    </div>
+                    <p className="font-semibold text-neutral-900">{industry.name}</p>
+                  </div>
                 </div>
-                <p className="font-semibold text-neutral-900">{industry.name}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center">
@@ -323,43 +384,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-secondary-500/15 rounded-full blur-3xl"></div>
+      {/* Partner Logos */}
+      {partnerLogos.length > 0 && (
+        <section className="py-16 md:py-20 bg-neutral-50 relative">
+          <div className="container-custom">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary-600">
+                Attracting Top Talent
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mt-4 mb-4">
+                Attracting top talent from great companies
+              </h2>
+              <p className="text-lg text-neutral-600">
+                The data leaders we place come from some of the most admired companies in the world.
+              </p>
+            </div>
 
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Trusted by Leading Companies
-            </h2>
-            <p className="text-xl text-neutral-300">
-              Our track record speaks for itself
-            </p>
+            <PartnerLogoCarousel logos={partnerLogos} />
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { number: '500+', label: 'Successful Placements', desc: 'Data professionals placed' },
-              { number: '95%', label: 'Client Satisfaction', desc: 'Would recommend us' },
-              { number: '18+', label: 'Months Retention', desc: 'Average placement duration' },
-              { number: '3', label: 'Weeks to Hire', desc: 'Average time to placement' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 group-hover:bg-white/10 transition-all duration-300 group-hover:scale-105">
-                  <p className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
-                    {stat.number}
-                  </p>
-                  <p className="text-white font-semibold mb-1">{stat.label}</p>
-                  <p className="text-sm text-neutral-400">{stat.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Roles We Fill */}
       <section className="section-padding bg-white">
@@ -445,17 +489,45 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="max-w-5xl mx-auto">
             {testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={testimonial.id}
-                name={testimonial.name}
-                position={testimonial.position}
-                company={testimonial.company}
-                content={testimonial.content}
-                rating={testimonial.rating}
-                image={testimonial.image}
-              />
+              <div key={testimonial.id} className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                {/* Quote Icon */}
+                <div className="absolute top-8 right-8 opacity-10">
+                  <svg className="w-24 h-24 text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-6 justify-center">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Testimonial Text */}
+                  <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8 text-center italic">
+                    "{testimonial.content}"
+                  </p>
+
+                  {/* Author */}
+                  <div className="flex items-center justify-center gap-4 pt-6 border-t border-neutral-200">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div className="text-left">
+                      <p className="text-xl font-bold text-neutral-900">{testimonial.name}</p>
+                      <p className="text-sm text-neutral-600">{testimonial.position}</p>
+                      <p className="text-sm text-neutral-500">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

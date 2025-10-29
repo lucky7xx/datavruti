@@ -1,7 +1,8 @@
 {
   "mission": "To bridge the gap between exceptional data talent and innovative companies, enabling organizations to unlock the full potential of their data.",
   "vision": "To be the most trusted partner for data and analytics hiring, recognized for our deep technical expertise and commitment to perfect matches.",
-  "story": "datavruti was founded with a simple observation: hiring data professionals is fundamentally different from hiring other tech roles. The combination of technical depth, domain expertise, and business acumen required makes data roles uniquely challenging to fill.\n\nOur founders, coming from data engineering and analytics backgrounds themselves, understood these challenges firsthand. They built datavruti to be more than a recruitment agency—we're a specialized partner that truly understands the data landscape.\n\nToday, we work with startups and enterprises across industries, helping them build world-class data teams. Our success is measured not just in placements, but in the long-term impact our candidates make.",
+  "story": "DataVruti is a specialist recruitment firm helping global enterprises and Series A+ startups hire top talent in India.\n\nIn 2018, we started building a rocketship but failed. Eventually, we found our calling in helping other leaders build theirs. From Series A+ funded startups to global organizations, we've hired across roles, levels, and geographies.\n\nOur founders, coming from technical and recruitment backgrounds themselves, understood these challenges firsthand. They built DataVruti to be more than a recruitment agency—we're operators who also recruit, bringing 50+ years of combined experience with deep understanding of the industries we operate in.",
+  "clientTypes": "Trusted by 50+ clients including one of the world's top 5 analytics firms, one of the world's largest consumer electronics firms, one of the world's largest FMCG companies, a 150-year-old global investment management firm, a 22-year-old US-based IT services company, one of the US's largest IT players in the insurance P&C domain, leading conversational AI SaaS startup, leading Revenue Growth Management (Supply Chain AI) SaaS startup, a large Big 4, and many more.",
   "values": [
     {
       "title": "Technical Excellence",
@@ -20,22 +21,76 @@
       "description": "Clear communication, honest feedback, and realistic expectations guide every interaction."
     }
   ],
+  "sectors": [
+    {
+      "name": "SaaS / Well Funded Startups",
+      "percentage": "27%"
+    },
+    {
+      "name": "BFSI",
+      "percentage": "20%"
+    },
+    {
+      "name": "IT / ITES",
+      "percentage": "16%"
+    },
+    {
+      "name": "Management / Tech Consulting",
+      "percentage": "16%"
+    },
+    {
+      "name": "Others",
+      "percentage": "21%"
+    }
+  ],
+  "jobFamilies": [
+    {
+      "category": "Data",
+      "roles": "Analysts, Data Engineering, BI, Data Science, LLM"
+    },
+    {
+      "category": "Product",
+      "roles": "Product Managers, Design, Full Stack, DevOps"
+    },
+    {
+      "category": "Sales",
+      "roles": "Hunters, Farmers"
+    },
+    {
+      "category": "CXOs",
+      "roles": "Operations, Design, Engineering"
+    }
+  ],
+  "engagementModels": [
+    {
+      "name": "Permanent Hiring",
+      "description": "Pay on closures"
+    },
+    {
+      "name": "Contract Staffing",
+      "description": "Monthly payroll services"
+    },
+    {
+      "name": "RPO / Managed Services",
+      "description": "Turnkey project basis"
+    }
+  ],
   "stats": [
+    {
+      "number": "7+",
+      "label": "Years in Business"
+    },
+    {
+      "number": "3+",
+      "label": "Avg. Years of Client Engagements"
+    },
+    {
+      "number": "50+",
+      "label": "Clients Served"
+    },
     {
       "number": "500+",
       "label": "Successful Placements"
-    },
-    {
-      "number": "95%",
-      "label": "Client Satisfaction"
-    },
-    {
-      "number": "18+",
-      "label": "Average Months Retention"
-    },
-    {
-      "number": "3",
-      "label": "Average Weeks to Hire"
     }
   ],
   "partnerLogos": [

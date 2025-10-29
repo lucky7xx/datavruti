@@ -564,7 +564,7 @@ export default function TalentPoolForm() {
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 ${
                   errors.email ? 'border-red-500' : 'border-neutral-300'
                 }`}
-                placeholder="abc@test.com"
+                placeholder="you@email.com"
                 required
               />
               {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}

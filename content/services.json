@@ -1,47 +1,47 @@
 [
   {
-    "id": "data-engineers",
-    "title": "Hire Data Engineers",
-    "slug": "data-engineers",
-    "shortDescription": "Connect with skilled data engineers who build robust data pipelines and infrastructure.",
-    "description": "Our data engineers specialize in designing, building, and maintaining scalable data infrastructure. From ETL pipelines to cloud data platforms, we provide professionals who can transform your data architecture.",
+    "id": "Consult-Deliver",
+    "title": "Consult & Deliver",
+    "slug": "Consult-Deliver",
+    "shortDescription": "Bring in HR industry veterans who walk the talk.",
+    "description": "Our consulting services bring decades of HR and recruitment expertise to help you navigate complex talent challenges. We don't just advise—we deliver results through actionable strategies and hands-on support.",
     "benefits": [
-      "Expert in modern data stack (Apache Spark, Kafka, Airflow)",
-      "Cloud platform expertise (AWS, GCP, Azure)",
-      "Scalable data pipeline development",
-      "Real-time data processing capabilities",
-      "Data warehouse and lake implementation"
+      "50+ years combined experience from senior leaders",
+      "Deep understanding of BFSI, SaaS, IT/ITES, and Consulting industries",
+      "Strategic talent acquisition planning and implementation",
+      "End-to-end recruitment process optimization",
+      "Custom solutions tailored to your organizational needs"
     ],
-    "icon": "database"
+    "icon": "lightbulb"
   },
   {
-    "id": "data-scientists",
-    "title": "Hire Data Scientists",
-    "slug": "data-scientists",
-    "shortDescription": "Find data scientists who turn data into actionable insights and predictive models.",
-    "description": "Our data scientists are experts in statistical analysis, machine learning, and AI. They help businesses unlock the value of their data through advanced analytics and predictive modeling.",
+    "id": "Search-Select",
+    "title": "Search & Select",
+    "slug": "Search-Select",
+    "shortDescription": "From CXOs to junior staff, attract top talent who can join soon.",
+    "description": "Our Search & Select service is designed to find and attract the best talent across all levels—from C-suite executives to junior professionals. We ensure candidates are ready to join quickly without compromising on quality.",
     "benefits": [
-      "Advanced machine learning and AI expertise",
-      "Statistical modeling and analysis",
-      "Python, R, and SQL proficiency",
-      "Experience with ML frameworks (TensorFlow, PyTorch, scikit-learn)",
-      "Business intelligence and data visualization"
+      "Leadership hiring: CXOs, VPs, Heads of Departments",
+      "Lateral hiring: Mid-level to senior professionals",
+      "Volume hiring: Junior to mid-level positions at scale",
+      "Fast turnaround: Candidates ready to join within 2 weeks",
+      "Rigorous screening: Only the most relevant candidates presented"
     ],
     "icon": "chart"
   },
   {
-    "id": "analytics-consulting",
-    "title": "Analytics Consulting",
-    "slug": "analytics-consulting",
-    "shortDescription": "Strategic analytics consultants to drive data-driven decision making.",
-    "description": "Our analytics consultants bridge the gap between business and technology, providing strategic guidance on analytics implementation, data strategy, and organizational transformation.",
+    "id": "Staffing & Payroll",
+    "title": "Staffing & Payroll",
+    "slug": "Staffing-Payroll",
+    "shortDescription": "Get ready to deploy resources on short notice.",
+    "description": "Our Staffing & Payroll services provide flexible workforce solutions for short-term projects, seasonal demands, or ongoing needs. We handle all compliance, payroll, and administrative tasks so you can focus on your business.",
     "benefits": [
-      "Data strategy development",
-      "Analytics roadmap planning",
-      "Tool selection and implementation",
-      "Team training and enablement",
-      "ROI optimization and measurement"
+      "Contract staffing for short-term and project-based needs",
+      "Payroll management and compliance handling",
+      "Quick deployment: Resources ready on short notice",
+      "Flexible engagement models to suit your requirements",
+      "End-to-end workforce management support"
     ],
-    "icon": "lightbulb"
+    "icon": "database"
   }
 ]
