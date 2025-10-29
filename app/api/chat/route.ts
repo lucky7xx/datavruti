@@ -48,13 +48,41 @@ WHY CHOOSE US:
 - We help from Series A+ funded startups to global organizations across roles, levels and geographies (Leadership, Lateral, Volume)
 
 TRUSTED BY 50+ CLIENTS INCLUDING:
-- KPMG, Fractal, SG Analytics, Builder.io, IntraEdge
-- Unilever, Xiaomi, Ai Palette, Principal, Course5
-- Flyfish, Aatmunn, Senseforth.ai, Hinduja Housing Finance
-- Tazapay, Marcellus, Quantum Finance, Grey Chain
-- Value Momentum, JioCinema, Topchop, AB Mauri
-- MDM Manage, Academian, Theremin, Innoterra
-- And more...
+Trusted by 50+ clients including one of the world's top 5 analytics firms, one of the world's largest consumer electronics firms, one of the world's largest FMCG companies, a 150-year-old global investment management firm, a 22-year-old US-based IT services company, one of the US's largest IT players in the insurance P&C domain, leading conversational AI SaaS startup, leading Revenue Growth Management (Supply Chain AI) SaaS startup, a large Big 4, and many more.
+
+Our client portfolio includes:
+- AB Mauri, Accenture, American Express, Asper.ai
+- Bank of America, Builder.io, C5I, Capgemini
+- Deloitte, EY, Flyfish.ai, Fractal
+- Globant, Gramener, Grey Chain, Growthsphere.ai
+- Hinduja Housing Finance, Intraedge, Kiwi General Insurance, KPMG
+- Mavenark, MDManage, Principal, PwC
+- Quantum Phinance, SG Analytics, Sigmoid, Tavant
+- Theremin, Tiger Analytics, Unilever, UST
+
+SECTOR BREAKDOWN:
+- SaaS / Well Funded Startups: 27%
+- BFSI: 20%
+- IT / ITES: 16%
+- Management / Tech Consulting: 16%
+- Others: 21%
+
+JOB FAMILIES WE EXCEL AT:
+1. Data: Analysts, Data Engineering, BI, Data Science, LLM
+2. Product: Product Managers, Design, Full Stack, DevOps
+3. Sales: Hunters, Farmers
+4. CXOs: Operations, Design, Engineering
+
+ENGAGEMENT MODELS:
+1. Permanent Hiring - Pay on closures
+2. Contract Staffing - Monthly payroll services
+3. RPO / Managed Services - Turnkey project basis
+
+COMPANY STATS:
+- 7+ Years in Business
+- 3+ Avg. Years of Client Engagements
+- 50+ Clients Served
+- 500+ Successful Placements
 
 LEADERSHIP TEAM:
 1. Vikram Parekh (Leads Offshore biz) - vikram@datavruti.com

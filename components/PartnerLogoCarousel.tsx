@@ -9,6 +9,7 @@ type PartnerLogo = {
 
 type PartnerLogoCarouselProps = {
   logos: PartnerLogo[];
+  bgColor?: 'white' | 'neutral-50';
 };
 
 const logoGradients = [
@@ -20,7 +21,7 @@ const logoGradients = [
   'from-rose-50/90 via-white to-rose-100/70',
 ];
 
-export default function PartnerLogoCarousel({ logos }: PartnerLogoCarouselProps) {
+export default function PartnerLogoCarousel({ logos, bgColor = 'white' }: PartnerLogoCarouselProps) {
   const marqueeLogos = useMemo(() => {
     if (logos.length === 0) return [];
     return [...logos, ...logos];
@@ -30,10 +31,14 @@ export default function PartnerLogoCarousel({ logos }: PartnerLogoCarouselProps)
     return null;
   }
 
+  const fadeGradientClass = bgColor === 'neutral-50'
+    ? 'from-neutral-50 via-neutral-50/80'
+    : 'from-white via-white/80';
+
   return (
     <div className="relative overflow-hidden group" aria-label="Logos of companies that hire through datavruti">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white via-white/80 to-transparent"></div>
+      <div className={`pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r ${fadeGradientClass} to-transparent`}></div>
+      <div className={`pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l ${fadeGradientClass} to-transparent`}></div>
 
       <div className="mask-fade-x">
         <div
@@ -43,19 +48,17 @@ export default function PartnerLogoCarousel({ logos }: PartnerLogoCarouselProps)
           {marqueeLogos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
-              className={`flex h-32 w-40 sm:h-36 sm:w-44 flex-shrink-0 flex-col items-center justify-center rounded-[28px] border border-neutral-200/70 bg-gradient-to-br ${
-                logoGradients[index % logoGradients.length]
-              } backdrop-blur px-6`}
+              className="flex h-28 w-44 sm:h-32 sm:w-52 flex-shrink-0 flex-col items-center justify-center rounded-2xl border border-neutral-200/50 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 px-6 py-4"
             >
-              <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-white/95 px-4">
+              <div className="flex flex-1 w-full items-center justify-center">
                 <img
                   src={logo.image}
                   alt={`${logo.name} logo`}
-                  className="h-10 w-auto object-contain"
+                  className="max-h-16 max-w-full w-auto h-auto object-contain"
                   loading="lazy"
                 />
               </div>
-              <p className="mt-3 w-full text-sm font-semibold text-neutral-700 text-center truncate">
+              <p className="mt-2 w-full text-xs font-medium text-neutral-500 text-center truncate">
                 {logo.name}
               </p>
             </div>
